@@ -9,7 +9,7 @@ The methods to specify the feature extraction are:
   --mfccfeatures -> extracts mean of features after mfcc transform
   @params (data) where data is a [tuple ([song_samples], samping_rate)] -> list of outputs from librosa.load()
   
-  --bestFeature extraction -> extracts mean, standard Deviation, skewness and kurtosis of features after mfcc transform
+  --getBest_Features -> extracts mean, standard Deviation, skewness and kurtosis of features after mfcc transform
   @params (data) where data is a [tuple ([song_samples], samping_rate)] -> list of outputs from librosa.load()
   
 The methods to specify the algorithm are:
@@ -21,4 +21,5 @@ The methods to specify the algorithm are:
    
 ExampleUsage:
 Feature Extraction: training_features = getBest_Features(data = data)
-Running the algorithm: myModel = genericML1(tdf,ldf) 
+Running the algorithm: myModel = genericML1(trainingData,trainingLabel) 
+prediction: myModel.predict(testingData)
